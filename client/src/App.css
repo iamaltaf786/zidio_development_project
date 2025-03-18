@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@keyframes shapeDownLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+.animation-shape {
+  animation: shapeDownLeft 2s linear infinite alternate;
+}
