@@ -6,7 +6,9 @@ export default function Dashboard() {
   return (
     <>
       <Navbar />
-      <DashboardSection />
+      <div className="m-20">
+        <DashboardSection />
+      </div>
     </>
   );
 }

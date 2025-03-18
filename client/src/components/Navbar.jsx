@@ -41,11 +41,11 @@ function Navbar() {
             <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
               GET QUOTE
             </button>
-            <div className="flex items-center bg-blue-600 text-white rounded-md">
+            {/* <div className="flex items-center bg-blue-600 text-white rounded-md">
               <Link to="/login" className="px-4 py-2 hover:bg-blue-500 rounded-md">Login</Link>
               <span className="px-2">/</span>
               <Link to="/signup" className="px-4 py-2 hover:bg-blue-500 rounded-md">Signup</Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
