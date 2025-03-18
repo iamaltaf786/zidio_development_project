@@ -30,7 +30,7 @@ function Login() {
       sessionStorage.setItem("token", response.data.token);
 
       // Redirect to dashboard
-      navigate("/dashboard");
+      navigate("/home");
     } catch (error) {
       setErrorMessage(
         error.response?.data?.message || "Login failed. Try again."

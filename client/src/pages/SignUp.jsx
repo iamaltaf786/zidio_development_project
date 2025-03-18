@@ -32,7 +32,9 @@ function SignUp() {
 
       // Redirect to login page after successful signup
       navigate("/login");
-    } catch (error) {}
+    } catch (error) {
+      alert("Signup failed. Try again.")
+    }
   };
 
   return (

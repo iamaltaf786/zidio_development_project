@@ -1,7 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar.jsx";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import AuthLayout from "./pages/AuthLayout.jsx";
@@ -12,12 +11,17 @@ function App() {
     <>
       {/* <Home /> */}
       {/* <AuthLayout /> */}
+
+      {/* Route to login/signup */}
       <Routes>
-        <Route path="/" element={<Home />}>
-          {/* <Route index element={<Login />} />
+        <Route path="/" element={<AuthLayout />}>
+          <Route index element={<Login />} />
           <Route path="login" element={<Login />} />
-          <Route path="signup" element={<SignUp />} /> */}
+          <Route path="signup" element={<SignUp />} />
         </Route>
+
+        {/* Route to Home */}
+        <Route path="/home" element={<Home />} />
       </Routes>
     </>
   );
