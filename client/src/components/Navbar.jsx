@@ -17,28 +17,50 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden text-2xl" 
+        <button
+          className="lg:hidden text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
         {/* Navigation Links */}
-        <div 
-          className={`lg:flex items-center justify-between w-full lg:w-auto transition-all duration-300 ease-in-out ${menuOpen ? "block" : "hidden"}`}
+        <div
+          className={`lg:flex items-center justify-between w-full lg:w-auto transition-all duration-300 ease-in-out ${
+            menuOpen ? "block" : "hidden"
+          }`}
         >
           <ul className="lg:flex items-center gap-6 text-lg text-gray-700 flex flex-col lg:flex-row mt-4 lg:mt-0">
-            <li><Link to="/" className="hover:text-blue-600">HOME</Link></li>
-            <li><Link to="/about" className="hover:text-blue-600">ABOUT US</Link></li>
-            <li><Link to="/services" className="hover:text-blue-600">SERVICES</Link></li>
-            <li><Link to="/careers" className="hover:text-blue-600">CAREERS</Link></li>
-            <li><Link to="/contact" className="hover:text-blue-600">CONTACT</Link></li>
+            <li>
+              <Link to="/" className="hover:text-blue-600">
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-blue-600">
+                ABOUT US
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-blue-600">
+                SERVICES
+              </Link>
+            </li>
+            <li>
+              <Link to="/careers" className="hover:text-blue-600">
+                CAREERS
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-blue-600">
+                CONTACT
+              </Link>
+            </li>
           </ul>
 
           {/* CTA Buttons */}
           <div className="flex flex-col lg:flex-row gap-4 mt-4 lg:mt-0 lg:ml-6">
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
+            <button className="bg-blue-600 text-white px-5 py-2 rounded-md cursor-pointer hover:bg-blue-700">
               GET QUOTE
             </button>
             {/* <div className="flex items-center bg-blue-600 text-white rounded-md">
