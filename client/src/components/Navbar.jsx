@@ -17,23 +17,40 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden text-2xl" 
+        <button
+          className="lg:hidden text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
 
         {/* Navigation Links */}
-        <div 
-          className={`lg:flex items-center justify-between w-full lg:w-auto transition-all duration-300 ease-in-out ${menuOpen ? "block" : "hidden"}`}
+        <div
+          className={`lg:flex items-center justify-between w-full lg:w-auto transition-all duration-300 ease-in-out ${
+            menuOpen ? "block" : "hidden"
+          }`}
         >
           <ul className="lg:flex items-center gap-6 text-lg text-gray-700 flex flex-col lg:flex-row mt-4 lg:mt-0">
-            <li><Link to="/" className="hover:text-blue-600">HOME</Link></li>
-            <li><Link to="/about" className="hover:text-blue-600">ABOUT US</Link></li>
-            <li><Link to="/services" className="hover:text-blue-600">SERVICES</Link></li>
-            <li><Link to="/careers" className="hover:text-blue-600">CAREERS</Link></li>
-            <li><Link to="/contact" className="hover:text-blue-600">CONTACT</Link></li>
+            <li>
+              <Link to="/" className="hover:text-blue-600">
+                DASHBOARD
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-blue-600">
+                ALL PROJECTS
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-blue-600">
+                ADD TASK
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className="hover:text-blue-600">
+                ADMIN PANEL
+              </Link>
+            </li>
           </ul>
 
           {/* CTA Buttons */}
