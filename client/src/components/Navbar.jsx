@@ -48,7 +48,7 @@ function Navbar() {
             </li>
             <li>
               <Link to="/services" className="hover:text-blue-600">
-                ADMIN PANEL
+                ADMIN
               </Link>
             </li>
           </ul>
