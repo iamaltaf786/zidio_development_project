@@ -32,17 +32,17 @@ function Navbar() {
         >
           <ul className="lg:flex items-center gap-6 text-lg text-gray-700 flex flex-col lg:flex-row mt-4 lg:mt-0">
             <li>
-              <Link to="/" className="hover:text-blue-600">
+              <Link to="/home" className="hover:text-blue-600">
                 DASHBOARD
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-blue-600">
+              <Link to="/allProjects" className="hover:text-blue-600">
                 ALL PROJECTS
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-600">
+              <Link to="/addTask" className="hover:text-blue-600">
                 ADD TASK
               </Link>
             </li>

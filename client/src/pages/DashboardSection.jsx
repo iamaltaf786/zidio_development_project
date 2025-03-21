@@ -1,7 +1,7 @@
 // Dashboard.jsx
 import React, { useState } from "react";
-import TaskList from "../components/tempFolders/TaskList";
-import AddTaskForm from "../components/tempFolders/AddTaskForm";
+// import TaskList from "../components/tempFolders/TaskList";
+// import AddTaskForm from "../components/tempFolders/AddTaskForm";
 import FilterTasks from "../components/tempFolders/FilterTasks";
 import TaskStats from "../components/tempFolders/TaskStats";
 
@@ -17,8 +17,8 @@ const DashboardSection = () => {
     <div className="p-6 bg-gray-50 min-h-screen">
       <TaskStats tasks={tasks} />
       <FilterTasks />
-      <AddTaskForm setTasks={setTasks} />
-      <TaskList tasks={tasks} />
+      {/* <AddTaskForm setTasks={setTasks} /> */}
+      {/* <TaskList tasks={tasks} /> */}
     </div>
   );
 };
