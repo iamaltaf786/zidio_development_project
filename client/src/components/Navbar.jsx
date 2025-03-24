@@ -47,7 +47,7 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/services" className="hover:text-blue-600">
+              <Link to="/admin" className="hover:text-blue-600">
                 ADMIN
               </Link>
             </li>
@@ -55,7 +55,7 @@ function Navbar() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col lg:flex-row gap-4 mt-4 lg:mt-0 lg:ml-6">
-            <button className="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
+            <button className="bg-blue-600 text-white px-5 py-2 rounded-md cursor-pointer hover:bg-blue-700">
               GET QUOTE
             </button>
             {/* <div className="flex items-center bg-blue-600 text-white rounded-md">

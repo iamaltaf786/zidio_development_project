@@ -1,26 +1,27 @@
-// Dashboard.jsx
-import React, { useState } from "react";
-// import TaskList from "../components/tempFolders/TaskList";
-// import AddTaskForm from "../components/tempFolders/AddTaskForm";
-import FilterTasks from "../components/tempFolders/FilterTasks";
-import TaskStats from "../components/tempFolders/TaskStats";
+import Sidebar from "../components/homeComponents/Sidebar";
+import SearchBar from "../components/homeComponents/SearchBar";
+import TaskOverview from "../components/homeComponents/TaskOverview";
+import TaskGraph from "../components/homeComponents/TaskGraph";
+import TaskCalendar from "../components/homeComponents/Calendar";
+import WorkProgress from "../components/homeComponents/WorkProgress";
 
-const DashboardSection = () => {
-  const [tasks, setTasks] = useState([
-    { id: 1, title: "Task 1", status: "completed" },
-    { id: 2, title: "Task 2", status: "pending" },
-    { id: 3, title: "Task 3", status: "completed" },
-    { id: 4, title: "Task 4", status: "pending" },
-  ]);
-
+const Dashboard = () => {
   return (
-    <div className="p-6 bg-gray-50 min-h-screen">
-      <TaskStats tasks={tasks} />
-      <FilterTasks />
-      {/* <AddTaskForm setTasks={setTasks} /> */}
-      {/* <TaskList tasks={tasks} /> */}
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-5">
+        <SearchBar />
+        <div className="grid grid-cols-3 gap-4 mt-5">
+          <div className="col-span-2">
+            <TaskOverview />
+            <TaskGraph />
+            <WorkProgress />
+          </div>
+          <TaskCalendar />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default DashboardSection;
+export default Dashboard;
