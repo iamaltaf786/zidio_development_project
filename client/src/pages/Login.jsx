@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import { MdError } from "react-icons/md";
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -33,8 +35,11 @@ function Login() {
       navigate("/home");
     } catch (error) {
       setErrorMessage(
-        error.response?.data?.message || "Login failed. Try again."
+        error.response?.data?.message || "Login failed. Try again or Signup."
       );
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 3000);
     } finally {
       setLoading(false);
     }
@@ -47,14 +52,18 @@ function Login() {
 
   return (
     <>
-      <div className="flex items-center justify-center min-h-[555px] bg-gray-100">
-        <div className="bg-white p-8 rounded-lg shadow-lg w-[450px] h-[500px] flex flex-col justify-between">
-          <h2 className="text-2xl font-semibold text-center text-gray-700 mt-6">
-            Already Have An Account?
-          </h2>
+      <div className="flex items-center justify-center min-h-[570px] bg-gray-100">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-[450px] h-[550px] flex flex-col justify-between">
+          <h1 className="text-center text-gray-600 mt-6">Login to</h1>
+          <p className="mt-1 text-xl font-bold text-center text-gray-700 ">
+            Zidio Development
+          </p>
 
           {errorMessage && (
-            <p className="text-red-500 text-center mb-4">{errorMessage}</p>
+            <div className="flex justify-center items-center text-red-500 text-center bg-red-200 border rounded gap-1 my-4 py-2">
+              <MdError />
+              <p> {errorMessage}</p>
+            </div>
           )}
 
           <form
@@ -68,19 +77,21 @@ function Login() {
                 </label>
                 <input
                   type="text"
-                  className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  placeholder="Your Gmail"
+                  className="placeholder-gray-400 placeholder:text-sm w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-5">
                 <label className="block text-gray-600 text-sm mb-2">
                   Password: *
                 </label>
                 <input
                   type="password"
-                  className="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  placeholder="Your Password"
+                  className="placeholder-gray-400 placeholder:text-sm w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -100,8 +111,9 @@ function Login() {
             </div>
 
             {/* Connect with Google Button */}
-            <div className="text-center mt-4">
-              <p className="text-gray-600 text-sm mb-2">Or</p>
+            <div className="text-center mt-1">
+              <hr className="border-gray-400" />
+              <p className="text-gray-500 text-sm mb-5">Or</p>
               <button
                 type="button"
                 onClick={handleGoogleLogin}
@@ -119,7 +131,7 @@ function Login() {
             <p className="text-sm text-center text-gray-600 mt-4">
               Don't have an account?{" "}
               <Link to="/signup" className="text-blue-500 hover:underline">
-                Create an account
+                Sign up
               </Link>
             </p>
           </form>
