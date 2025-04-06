@@ -53,7 +53,7 @@ function SignUp() {
                 type="text"
                 name="firstName"
                 placeholder="First Name *"
-                className="w-full p-2 border rounded-lg text-sm"
+                className="w-full p-2 border rounded-lg text-sm bg-gray-100 text-black placeholder-gray-500 border-gray-300"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
@@ -62,7 +62,7 @@ function SignUp() {
                 type="text"
                 name="lastName"
                 placeholder="Last Name *"
-                className="w-full p-2 border rounded-lg text-sm"
+                className="w-full p-2 border rounded-lg text-sm bg-gray-100 text-black placeholder-gray-500 border-gray-300"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
@@ -72,7 +72,7 @@ function SignUp() {
               type="email"
               name="email"
               placeholder="Email *"
-              className="w-full p-2 border rounded-lg text-sm mt-2"
+              className="w-full p-2 border rounded-lg text-sm mt-2 bg-gray-100 text-black placeholder-gray-500 border-gray-300"
               value={formData.email}
               onChange={handleChange}
               required
@@ -81,7 +81,7 @@ function SignUp() {
               type="text"
               name="username"
               placeholder="Username *"
-              className="w-full p-2 border rounded-lg text-sm mt-2"
+              className="w-full p-2 border rounded-lg text-sm mt-2 bg-gray-100 text-black placeholder-gray-500 border-gray-300"
               value={formData.username}
               onChange={handleChange}
               required
@@ -90,7 +90,7 @@ function SignUp() {
               type="password"
               name="password"
               placeholder="Password *"
-              className="w-full p-2 border rounded-lg text-sm mt-2"
+              className="w-full p-2 border rounded-lg text-sm mt-2 bg-gray-100 text-black placeholder-gray-500 border-gray-300"
               value={formData.password}
               onChange={handleChange}
               required
@@ -99,7 +99,7 @@ function SignUp() {
               type="password"
               name="confirmPassword"
               placeholder="Confirm Password *"
-              className="w-full p-2 border rounded-lg text-sm mt-2"
+              className="w-full p-2 border rounded-lg text-sm mt-2 bg-gray-100 text-black placeholder-gray-500 border-gray-300"
               value={formData.confirmPassword}
               onChange={handleChange}
               required

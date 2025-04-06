@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -50,10 +50,71 @@ function Login() {
     // Google OAuth integration still remains...;)
   };
 
+  // Moving Balls
+  // const containerWidth = 450;
+  // const containerHeight = 550;
+  // const ballSize = 15;
+
+  // const ballColors = [
+  //   "bg-red-500",
+  //   "bg-blue-500",
+  //   "bg-green-500",
+  //   "bg-yellow-500",
+  // ];
+
+  // const [positions, setPositions] = useState(
+  //   Array(4)
+  //     .fill()
+  //     .map(() => ({
+  //       x: Math.random() * (containerWidth - ballSize),
+  //       y: Math.random() * (containerHeight - ballSize),
+  //       dx: (Math.random() - 0.5) * 4,
+  //       dy: (Math.random() - 0.5) * 4,
+  //     }))
+  // );
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setPositions((prevPositions) =>
+  //       prevPositions.map((pos) => {
+  //         let newX = pos.x + pos.dx;
+  //         let newY = pos.y + pos.dy;
+
+  //         // Bounce off walls
+  //         if (newX <= 0 || newX >= containerWidth - ballSize) pos.dx *= -1;
+  //         if (newY <= 0 || newY >= containerHeight - ballSize) pos.dy *= -1;
+
+  //         return { ...pos, x: pos.x + pos.dx, y: pos.y + pos.dy };
+  //       })
+  //     );
+  //   }, 20); // Smooth animation update
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
   return (
     <>
-      <div className="flex items-center justify-center min-h-[570px] bg-gray-100">
+      <div className="relative flex items-center justify-center min-h-[570px] bg-gray-100">
+        {/* bg desines for better UI :) */}
+        {/* <div className="-left-75 -top-75  absolute rounded-full w-150 h-150 bg-[#3333a6]"></div> */}
+
         <div className="bg-white p-8 rounded-lg shadow-lg w-[450px] h-[550px] flex flex-col justify-between">
+          {/* <div className="top-0 z-1"> */}
+          {/* Moving Balls */}
+          {/* {positions.map((pos, index) => (
+              <div
+                key={index}
+                className={`absolute rounded-full ${ballColors[index]}`}
+                style={{
+                  width: `${ballSize}px`,
+                  height: `${ballSize}px`,
+                  left: `${pos.x}px`,
+                  top: `${pos.y}px`,
+                }}
+              />
+            ))} */}
+          {/* </div> */}
+
           <h1 className="text-center text-gray-600 mt-6">Login to</h1>
           <p className="mt-1 text-xl font-bold text-center text-gray-700 ">
             Zidio Development
@@ -78,7 +139,7 @@ function Login() {
                 <input
                   type="text"
                   placeholder="Your Gmail"
-                  className="placeholder-gray-400 placeholder:text-sm w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="bg-gray-100 text-black placeholder-gray-500 placeholder:text-sm w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
@@ -91,7 +152,7 @@ function Login() {
                 <input
                   type="password"
                   placeholder="Your Password"
-                  className="placeholder-gray-400 placeholder:text-sm w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  className="bg-gray-100 text-black placeholder-gray-500 placeholder:text-sm w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
