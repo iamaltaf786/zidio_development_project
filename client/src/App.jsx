@@ -9,6 +9,7 @@ import Home from "./pages/Home.jsx";
 import { DateProvider } from "./context/DateContext.jsx";
 import TaskList from "./components/tempFolders/TaskList.jsx";
 import AddTaskForm from "./components/tempFolders/AddTaskForm.jsx";
+import OpenChat from "./components/OpenChat.jsx";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -37,6 +38,7 @@ function App() {
             path="/addTask"
             element={<AddTaskForm setTasks={setTasks} />}
           />
+          <Route path="/open-chat" element={<OpenChat />} />
         </Routes>
       </DateProvider>
     </>
